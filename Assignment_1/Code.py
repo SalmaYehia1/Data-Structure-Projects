@@ -32,15 +32,15 @@ def selection_sort(arr):
 
 # Bubble Sort
 def bubble_sort(arr):
-    n = len(arr)
-    for i in range(n - 1):
+    n = len(arr) 
+    for i in range(n, 0, -1): 
         swapped = False
-        for j in range(n - 1 - i):  
-            if arr[j] > arr[j + 1]:
-                arr[j], arr[j + 1] = arr[j + 1], arr[j]
-                swapped = True
-        if not swapped: 
-            break  
+        for j in range(i - 1):  
+            if arr[j] > arr[j + 1]: 
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]  
+                swapped = True  
+        if not swapped:  
+            break 
 
 # to measure sorting time
 def measure_time(sort_function, arr):
